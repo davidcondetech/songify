@@ -12,6 +12,7 @@ function Formulario() {
       ...search,
       [e.target.name]: e.target.value
     });
+    console.log(search);
   };
 
   return (
@@ -30,6 +31,7 @@ function Formulario() {
                       className="form-control"
                       name="artist"
                       placeholder="Nombre Artista"
+                      onChange={updateState}
                       required
                     />
                   </div>
@@ -42,6 +44,7 @@ function Formulario() {
                       className="form-control"
                       name="song"
                       placeholder="Nombre Canción"
+                      onChange={updateState}
                       required
                     />
                   </div>
