@@ -34,7 +34,7 @@ legend::before {
   left: -30px;
   right: -30px;
   transform: rotate(-1deg);
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 legend:hover::before {
@@ -45,7 +45,7 @@ form.card {
   border: none;
 }
 
-.letra {
+.lyric {
   white-space: pre-wrap;
 }
 
@@ -69,7 +69,4 @@ h2 {
 }
 .fa-twitter {
   color: #0084b4;
-}
-.fa-lastfm {
-  color: #d51007;
 }

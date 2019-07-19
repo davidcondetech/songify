@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Formulario() {
+function Formulario({ requestAPI }) {
   const [search, setSearch] = useState({
     artist: "",
     song: ""
@@ -12,14 +12,22 @@ function Formulario() {
       ...search,
       [e.target.name]: e.target.value
     });
-    console.log(search);
+  };
+
+  //When we submit our form, this method binds Formulario.js with App.js
+  const sendInfo = e => {
+    e.preventDefault();
+    requestAPI(search);
   };
 
   return (
     <div className="bg-info">
       <div className="container">
         <div className="row">
-          <form className="col card text-white bg-transparent  mb-5 pt-5 pb-2">
+          <form
+            onSubmit={sendInfo}
+            className="col card text-white bg-transparent  mb-5 pt-5 pb-2"
+          >
             <fieldset>
               <legend className="text-center">Buscador Letras Canciones</legend>
               <div className="row">
